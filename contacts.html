@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Контакты | Автосервис "Мастер"</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Подключение Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Автосервис "Мастер"</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-form">
+        <h2>Оставьте заявку</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </section>
+
+    <section class="contacts">
+        <h2>Контакты</h2>
+        <p>Адрес: г. Москва, ул. Авторемонтная, д. 123</p>
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>Email: info@autoservice.ru</p>
+    
+        <!-- Социальные сети и почта -->
+        <div class="social-links">
+            <a href="https://vk.com/islysh" target="_blank" class="social-link">
+                <i class="fab fa-vk"></i> <!-- Иконка ВКонтакте -->
+            </a>
+            <a href="https://t.me/Matrix788" target="_blank" class="social-link">
+                <i class="fab fa-telegram"></i> <!-- Иконка Telegram -->
+            </a>
+            <a href="mailto:info@autoservice.ru" class="social-link">
+                <i class="fas fa-envelope"></i> <!-- Иконка почты -->
+            </a>
+        </div>
+    
+        <!-- Карта -->
+        <div class="map">
+            <iframe
+                width="100%"
+                height="400"
+                frameborder="0"
+                style="border:0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372951144676!2d37.61729931593084!3d55.75582698055348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2sRed%20Square!5e0!3m2!1sen!2sru!4v1622541234567!5m2!1sen!2sru"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Автосервис "Мастер". Все права защищены.</p>
+    </footer>
+</body>
+</html>

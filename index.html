@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автосервис "Мастер"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Автосервис "Мастер"</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Секция Hero -->
+    <!-- Секция Hero -->
+<section class="hero" style="background-image: url('images/hero-bg.jpg');">
+    <div class="hero-content">
+        <h2>Профессиональный ремонт автомобилей</h2>
+        <p>Мы предлагаем качественные услуги по ремонту и обслуживанию автомобилей.</p>
+        <a href="services.html" class="btn btn-hero">Наши услуги</a>
+        <a href="#appointment" class="btn btn-secondary">Записаться онлайн</a>
+    </div>
+</section>
+
+    <!-- Секция Преимущества -->
+    <section class="benefits">
+        <h2>Почему выбирают нас?</h2>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <h3>🚗 Опытные мастера</h3>
+                <p>Наши специалисты имеют более 10 лет опыта в ремонте автомобилей.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>🔧 Современное оборудование</h3>
+                <p>Мы используем только современное и сертифицированное оборудование.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>⏱ Быстрое выполнение</h3>
+                <p>Большинство ремонтов выполняем в течение одного дня.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>💲 Доступные цены</h3>
+                <p>Предлагаем конкурентные цены и гибкую систему скидок.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Акции -->
+    <section class="promo">
+        <h2>Акции и спецпредложения</h2>
+        <div class="promo-list">
+            <div class="promo-item">
+                <h3>🎁 Скидка 10% на первый визит</h3>
+                <p>Получите скидку 10% на все услуги при первом обращении.</p>
+            </div>
+            <div class="promo-item">
+                <h3>🛠 Бесплатная диагностика</h3>
+                <p>При комплексном ремонте — диагностика в подарок!</p>
+            </div>
+            <div class="promo-item">
+                <h3>🚘 Замена масла со скидкой</h3>
+                <p>Скидка 15% на замену масла и фильтров до конца месяца.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Отзывы -->
+    <section class="reviews">
+        <h2>Отзывы наших клиентов</h2>
+        <div class="reviews-list">
+            <div class="review-item">
+                <p>"Отличный сервис! Быстро и качественно починили подвеску. Рекомендую!"</p>
+                <span>— Иван, г. Москва</span>
+            </div>
+            <div class="review-item">
+                <p>"Спасибо за оперативную замену тормозных колодок. Цены приятно удивили."</p>
+                <span>— Ольга, г. Санкт-Петербург</span>
+            </div>
+            <div class="review-item">
+                <p>"Лучший автосервис в городе! Всегда честно и без лишних навязываний."</p>
+                <span>— Алексей, г. Казань</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Запись онлайн -->
+    <section id="appointment" class="appointment">
+        <h2>Записаться онлайн</h2>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Услуга:</label>
+                    <select id="service" name="service">
+                        <option value="diagnostics">Диагностика</option>
+                        <option value="engine-repair">Ремонт двигателя</option>
+                        <option value="oil-change">Замена масла</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Комментарий (необязательно):</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Автосервис "Мастер". Все права защищены.</p>
+    </footer>
+</body>
+</html>
