@@ -1,0 +1,963 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Стили для шапки */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  .header-hidden {
+    transform: translateY(-100%);
+  }
+.logo {
+    margin-right: auto; /* Добавить эту строку */
+    padding-left: 20px; /* Добавить эту строку */
+}
+/* Логотип */
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+.main-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.nav-list {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.nav-list li {
+    margin: 0;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-right: 25px;
+    margin-left:-30px;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+}
+.nav-list a:hover {
+    color: #ff6347;
+}
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+}
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Добавить эту строку */
+    align-items: center;
+    flex-grow: 1;
+}
+nav ul li {
+    margin-left: 0; /* Убрано предыдущее margin-left */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* Добавлены отступы для ссылок */
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Стили для секции Hero */
+/* Стили для секции Hero */
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 150px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Убрано: background-attachment: fixed; */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Стили для кнопок в секции Hero */
+.btn-hero {
+    background: #ff6347;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.btn-hero:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #ff6347;
+}
+/* Анимация пульсации для кнопок в Hero */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Стили для секций */
+.services, .about, .contacts, .benefits, .promo, .reviews, .appointment {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Стили для списка услуг */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    margin-top: 0;
+    color: #ff6347;
+}
+
+.service-item p {
+    color: #555;
+}
+
+/* Стили для изображений в карточках услуг */
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Стили для секции Преимущества */
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.benefit-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item h3 {
+    color: #ff6347;
+}
+
+/* Стили для секции Акции */
+.promo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.promo-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.promo-item h3 {
+    color: #ff6347;
+}
+
+/* Стили для секции Отзывы */
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.review-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-item p {
+    font-style: italic;
+}
+
+.review-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Стили для формы записи онлайн */
+.appointment {
+    background: #f9f9f9;
+}
+
+/* Стили для формы обратной связи */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 16px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2);
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background: #e5533d;
+    transform: translateY(-2px);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ff4500;
+}
+
+/* Стили для футера */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Анимация появления контента */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применяем анимацию к основным секциям */
+.hero, .services, .about, .contacts, .benefits, .promo, .reviews, .appointment {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Плавный переход для всех ссылок */
+a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+
+
+.appointment {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+.appointment h2 {
+    margin-bottom: 20px;
+}
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Стили для секции "О нас" */
+/* Общие стили для секции "О нас" */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Стили для каждого блока "О нас" */
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-section h3 {
+    font-size: 2em;
+    color: #ff6347;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-section h3 i {
+    font-size: 1.5em;
+}
+
+/* История компании */
+.history {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history .about-content {
+    flex: 1;
+}
+
+.history .about-image {
+    flex: 1;
+}
+
+.history img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Наши ценности */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.value-item i {
+    font-size: 2em;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.value-item h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    color: #555;
+}
+
+/* Наша команда */
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    font-size: 1.5em;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #555;
+}
+
+/* Наши достижения */
+.awards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.awards img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.awards img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Стили для секции контактов */
+.contacts {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.contacts h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contacts p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Стили для социальных ссылок */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    font-size: 2em;
+    color: #ff6347; /* Цвет иконок */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ff4500; /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличение иконки при наведении */
+    transform: translateY(-5px);
+}
+
+/* Стили для карты */
+.map {
+    margin-top: 40px;
+}
+
+.client-oriented {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-oriented:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.client-oriented i {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.client-oriented h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.client-oriented p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation: modalopen 0.4s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6347;
+}
+
+
+
+
+
+
+
+
+.benefit-item, .promo-item, .review-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+header {
+    position: fixed; /* Делаем шапку фиксированной */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Убедитесь, что шапка поверх других элементов */
+    transition: transform 0.3s ease; /* Плавная анимация */
+}
+
+/* Класс, который будет добавляться при прокрутке вниз */
+header.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+  }
+  
+  .menu-toggle__line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Навигационное меню */
+  .main-nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-list a:hover {
+    color: #ff6347;
+  }
+  
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    
+    .main-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      transform: translateY(-150%);
+      transition: transform 0.3s ease;
+    }
+    
+    .main-nav.active {
+      transform: translateY(0);
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    /* Анимация кнопки меню */
+    .menu-toggle.active .menu-toggle__line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active .menu-toggle__line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu-toggle.active .menu-toggle__line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Мобильное меню - одинаковые стили для всех страниц */
+.mobile-menu-btn {
+    display: none; /* По умолчанию скрыта */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+  }
+  
+  .mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+    }
+    
+    .main-nav {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background: #333;
+      transition: left 0.3s ease;
+    }
+    
+    .main-nav.active {
+      left: 0;
+    }
+    
+    .nav-list {
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Анимация бургер-кнопки */
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
